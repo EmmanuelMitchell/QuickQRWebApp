@@ -4,7 +4,7 @@ import { useQRCodeContext } from "../context/QRCodeContext";
 import { useNavigate } from "react-router-dom";
 
 export default function QRCodeGenerator() {
-  const navigate = useNavigate(); // Create a navigate function
+  const navigate = useNavigate();
   const {
     activeTab,
     setActiveTab,
@@ -12,8 +12,8 @@ export default function QRCodeGenerator() {
     setQrColor,
     bgColor,
     setBgColor,
-    file,
-    setFile,
+    // file,
+    // setFile,
     inputValue,
     setInputValue,
     qrRef,
