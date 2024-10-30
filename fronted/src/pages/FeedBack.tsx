@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com"; // Import EmailJS
 
 export default function FeedbackPage() {
@@ -124,12 +124,15 @@ export default function FeedbackPage() {
 
         {/* Go Back Button */}
         <div className="text-center">
-          <button
-            onClick={() => navigate(-1)} // Navigate back
+          {/* <button */}
+          <Link
+            to="/qrcode"
+            // onClick={() => navigate(-1)} // Navigate back
             className="mt-4 px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-400"
           >
             Go Back
-          </button>
+          </Link>
+          {/* </button> */}
         </div>
       </div>
 
