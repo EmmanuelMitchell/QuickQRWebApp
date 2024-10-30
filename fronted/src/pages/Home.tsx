@@ -23,8 +23,7 @@ export default function Home() {
             Generate and scan QR codes for URLs, emails, whatsapp, and more.
             Perfect for businesses, events, and personal use.
           </p>
-          {/* <Link */}
-          {/* to="/" */}
+
           <Link
             to="qrcode"
             className="inline-block mt-4 px-8 py-4  bg-[#001247] text-white font-bold rounded-lg shadow-lg hover:bg-[001247] transition duration-200"
