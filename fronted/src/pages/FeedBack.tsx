@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import emailjs from "emailjs-com"; // Import EmailJS
 
 export default function FeedbackPage() {
   const [feedback, setFeedback] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const navigate = useNavigate();
 
   const handleFeedbackSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

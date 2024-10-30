@@ -228,22 +228,22 @@ export default function QRCodeGenerator() {
                   }
                 />
               </div>
-              <div className="flex space-x-2 mt-4">
+              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mt-4">
                 <button
                   onClick={handleDownloadPNG}
-                  className="px-3 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500"
+                  className="w-full px-2 py-2 md:px-4 md:py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 text-sm"
                 >
                   Download PNG
                 </button>
                 <button
                   onClick={handleDownloadSVG}
-                  className="px-3 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500"
+                  className="w-full px-2 py-2 md:px-4 md:py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 text-sm"
                 >
                   Download SVG
                 </button>
                 <button
                   onClick={handleDownloadPDF}
-                  className="px-3 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500"
+                  className="w-full px-2 py-2 md:px-4 md:py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 text-sm"
                 >
                   Download PDF
                 </button>
