@@ -2,11 +2,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-import { QRCodeProvider } from "./context/QRCodeContext.tsx";
+// import { QRCodeProvider } from "./context/QRCodeContext.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <QRCodeProvider>
-      <App />
-    </QRCodeProvider>
+    {/* <QRCodeProvider> */}
+    <App />
+    {/* </QRCodeProvider> */}
   </StrictMode>
 );
