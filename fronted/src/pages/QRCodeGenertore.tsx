@@ -15,6 +15,7 @@ export default function QRCodeGenerator() {
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
       setFile(event.target.files[0]);
+      console.log("Image Upload..", event.target.files[0]);
     }
   };
 
@@ -57,7 +58,7 @@ export default function QRCodeGenerator() {
 
   const handleGenerateQRCode = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(inputValue);
+    console.log("Input file....", inputValue);
   };
 
   return (
@@ -87,7 +88,7 @@ export default function QRCodeGenerator() {
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 font-semibold text-gray-600 ${
                 activeTab === tab
-                  ? "text-indigo-600 border-b-2 border-indigo-600"
+                  ? "text-indigo-900 border-b-2 border-indigo-600"
                   : "hover:text-indigo-500"
               }`}
             >
@@ -127,7 +128,7 @@ export default function QRCodeGenerator() {
                 <input
                   type="email"
                   id="email"
-                  placeholder="example@email.com"
+                  placeholder="johndoe@email.com"
                   onChange={(e) => setInputValue(e.target.value)}
                   className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                 />
@@ -154,7 +155,7 @@ export default function QRCodeGenerator() {
             )}
 
             {/* Color Pickers */}
-            <div className="flex flex-col md:flex-row justify-between p-3">
+            <div className="flex p-1 md:flex-row justify-between md:p-3">
               <div className="flex flex-col items-start">
                 <label className="block text-sm font-medium text-gray-700">
                   QR Code Color
@@ -192,8 +193,8 @@ export default function QRCodeGenerator() {
               />
             </div>
 
-            <div className="flex space-x-2 mt-4">
-              <button className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500">
+            <div className="flex flex-col gap-2 md:flex-row  mt-4">
+              <button className="w-full px-4 py-2  bg-indigo-600 text-white rounded-lg hover:bg-indigo-500">
                 Generate QR Code
               </button>
               <button
@@ -228,10 +229,10 @@ export default function QRCodeGenerator() {
                   }
                 />
               </div>
-              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mt-4">
+              <div className="flex flex-col gap-2 md:flex-row md:space-x-1 mt-3">
                 <button
                   onClick={handleDownloadPNG}
-                  className="w-full px-2 py-2 md:px-4 md:py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 text-sm"
+                  className="w-full px-2 py-2 md:px-3 md:py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 text-sm"
                 >
                   Download PNG
                 </button>
